@@ -16,8 +16,8 @@ function satisfies (rules, obj) {
     while (i < l && (k = keys[i++])) {
       if ((rv = rules[k]) !== void 0 && !has.call(obj, k)) return no
       ov = obj[k]
-      if ((rvt = type(rv)) === 'function') { if (!rv(ov)) return no; break }
-      if (rvt === 'regexp') { if (!rv.test(ov)) return no; break }
+      if ((rvt = type(rv)) === 'function') { if (!rv(ov)) return no; continue }
+      if (rvt === 'regexp') { if (!rv.test(ov)) return no; continue }
       if (rvt === 'array' && type(ov) === 'array') rv.sort(), ov.sort()
       if (!eq(rv, ov)) return no
     }
