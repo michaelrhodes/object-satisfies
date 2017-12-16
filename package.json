@@ -2,7 +2,7 @@
   "name": "object-satisfies",
   "description": "test an object against a set of rules",
   "author": "Michael Rhodes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
